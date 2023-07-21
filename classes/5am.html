@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shades</title>
+    <style>
+      body{
+        background: white;
+      }
+
+      .blur{ filter: blur(4px);}
+      .brightness{ filter: brightness(250%);}
+      .contrast{ filter: contrast(180%);}
+      .grayscale{ filter: grayscale(100%);}
+      .huerotate{ filter: hue-rotate(180deg);}
+      .invert{ filter: invert(100%);}
+      .opacity{ filter: opacity(50%);}
+      .saturate{ filter: saturate(7);}
+      .sepia{ filter: sepia(100%);}
+      .shadow{ filter: drop-shadow(8px 8px 10px green);}
+
+      #myImg{
+        width: 33%;
+        height: auto;
+        float: left;
+        max-width: 235px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg:hover{ opacity: 0.7;}
+
+      #caption{
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      .close{
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover, .close:focus{
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-content{
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+      .modal-content, #caption{
+        animation: zoom 0.6s;
+      }
+      @keyframes zoom {
+        from{transform: scale(0.1);}
+        to{transform: scale(1);}
+      }
+      
+      .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      @media only screen and (max-width: 700px) {
+        .modal-content{
+          width: 100%;
+        }
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h2>Image Filters</h2>
+    <p><b>Note:</b>Image filters are not supported by internet explorer or edge</p>
+
+    <img id="myImg" src="image1.jpg" alt="Normal tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="blur" src="image1.jpg" alt="Blurred tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="brightness" src="image1.jpg" alt="Brightened tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="contrast" src="image1.jpg" alt="180% Contrasted tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="grayscale" src="image1.jpg" alt="Black and white tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="huerotate" src="image1.jpg" alt="180deg Huerotate tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="invert" src="image1.jpg" alt="100% Inverted tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="opacity" src="image1.jpg" alt="50% Opacity tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="saturate" src="image1.jpg" alt="Saturated tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="sepia" src="image1.jpg" alt="Sepia tree photo" width="300" height="300">&nbsp;
+    <img id="myImg" class="shadow" src="image1.jpg" alt="Shadowed tree photo" width="300" height="300">
+    
+    <!--The modal-->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="imageX">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      //Get the modal
+      var modal=document.getElementById("myModal");
+      
+      //Get the images and insert them inside the modal - use their "alt" text as caption
+      var img=document.getElementById("myImg");
+      var modalImg=document.getElementById("imageX");
+      var captiontext=document.getElementById("caption");
+      img.onclick= function(){
+        modal.style.display="block";
+        modalImg.src= this.src;
+        captiontext.innerHTML=this.alt;
+      }
+      //Get the <span> element that closes the modal
+        var span=document.getElementsByClassName("close")[0];
+
+        //When the user clicks on <span> (x), close the modal
+          span.onclick= function(){
+            modal.style.display= "none";
+          }
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rwanda Airbnb </title>
+
+    <style>
+      *{
+        box-sizing: border-box;
+        background-color: rgba(115, 76, 214, 0.5);
+        background-image: linear-gradient(rgba(115, 76, 214, 0.5), white);
+      }
+img{
+  max-width: 100%;
+  height: 500px;
+}
+
+/*slideshow container*/
+.SHcontainer{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/*Hide the images by default*/
+.myslides{
+  display: none;
+}
+
+/*Next and previous buttons*/
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/*position the next button to the right*/
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*on hover, add a black background color with a little bit see through*/
+.prev:hover, .next:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*caption text*/
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/*number text*/
+.numbertext{
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*the dots/bullets/indicators*/
+.dot{
+  cursor: pointer;
+  height: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+/*fading animation*/
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from{opacity: .4}
+  to{opacity: 1}
+}
+    </style>
+
+  </head>
+
+
+  <body>
+<!--slideshow container-->
+    <div class="SHcontainer">
+
+      <!--Full width images with captions and numbers-->
+      <div class="myslides">
+        <div class="numbertext">1 / 9</div>
+        <img src="image1.jpg" style="width:100%">
+        <div class="text">HOME IS WHERE YOU BOOK IT</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">2 / 9</div>
+        <img src="image7.jpg" style="width:100%">
+        <div class="text">VACATE IN WONDERFUL PLACES</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">3 / 9</div>
+        <img src="image5.jpg" style="width:100%">
+        <div class="text">FUNCATE WHERE THE HEART IS</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">4 / 9</div>
+        <img src="image8.jpg" style="width:100%">
+        <div class="text">BEAUTIFUL DESTINATIONS WITH BEAUTIFUL PEOPLE</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">5 / 9</div>
+        <img src="image3.jpg" style="width:100%">
+        <div class="text">SPECIAL PLACES BRING YOU SPECIAL MEMORIES</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">6 / 9</div>
+        <img src="image6.jpg" style="width:100%">
+        <div class="text">IT'S PLENTLY FOR EVERYONE</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">7 / 9</div>
+        <img src="image9.jpg" style="width:100%">
+        <div class="text">EVERY PLACE MATTERS</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">8 / 9</div>
+        <img src="image2.jpg" style="width:100%">
+        <div class="text">A FAMILY THAT TRAVELS TOGETHER HAS FUN TOGETHER</div>
+      </div>
+
+      <div class="myslides">
+        <div class="numbertext">9 / 9</div>
+        <img src="image4.jpg" style="width:100%">
+        <div class="text">YOU ARE CLOSE TO REACHING YOUR DREAM DESTINATION</div>
+      </div>
+
+      <!--Previous and next buttons-->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <!--dots/circles-->
+
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+    </div>
+
+    <script>
+      let slideIndex= 1;
+showSlides(slideIndex);
+
+//next/previous controls
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+//Thumbnail image controls
+function currentSlide(n){
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  let i;
+  let slides= document.getElementsByClassName("myslides");
+  let dots= document.getElementsByClassName("dot");
+  if(n > slides.length) {slideIndex = 1;}
+  if(n < 1) {slideIndex = slides.length;}
+  for(i=0; i < slides.length; i++){
+    slides[i].style.display = "none";
+  }
+  for(i=0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display="block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+  </body>
+
+
+</html>
