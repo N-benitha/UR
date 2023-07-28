@@ -1,0 +1,78 @@
+body{
+    background-color: lavender;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.signup-box{
+    width: 540px;
+    height:620px;
+    margin:auto;
+    background-color: #8585C2;
+    border-radius: 21px;
+    box-shadow: 0 0 50px rgba(133, 122, 194, 1);
+    
+}
+h1{
+    text-align: center;
+    padding-top:15px;
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 500px;
+}
+form input{
+    width: 600px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 9px;
+    outline: none;
+}
+button[type="submit"]{
+    width: 420px;
+    height: 45px;
+    margin-top: 25px;
+    background-color: #858073;
+    color: #6b473d;
+    font-size: 20px;
+    border: none;
+    border-radius: 21px;
+    margin-left: 45px;
+    
+}
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin-left: 90px;
+    border: 15px groove solid gray;
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.login-box{
+    width: 360px;
+    height: 280px;
+    border-radius: 9px;
+    color: black;
+}
+.signup-box a{
+    color: white;
+    text-decoration: none;
+}
+.para a{
+    text-decoration: underline;
+}
+.login-box a{
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
