@@ -114,48 +114,37 @@
             background-color: #f7f7f7;
             padding: 50px 0;
             text-align: center;
-            display: flex; /* Use flexbox to align the divs side by side */
-            justify-content: space-between; /* Add space between the divs */
-        }
-
-        .story-heading {
-            flex: 1; /* Let the heading div take available space */
-            padding: 0 20px; /* Add some padding */
         }
 
         .user-stories h1 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: black
         }
 
         .user-stories p {
             font-size: 18px;
             margin-bottom: 20px;
-            color: black;
         }
 
         .story-slider {
-            flex: 2; /* Let the slider div take more space */
             display: flex;
-            flex-wrap: wrap; /* Allow stories to wrap */
             justify-content: space-between;
             margin-top: 20px;
         }
 
         .story {
-            flex-basis: 48%; /* Each story takes up about 48% of the available width */
+            flex: 1;
+            max-width: 23%;
             border: 1px solid #ccc;
             border-radius: 5px;
             overflow: hidden;
-            margin-bottom: 20px; /* Add some spacing between stories */
         }
 
         .story img {
             max-width: 100%;
             height: auto;
         }
-            footer{
+        footer{
               background-color: #111;
               color: white;
               font-weight: medium;
@@ -213,42 +202,28 @@
             <button class="signup"><a href="assignment.html" style="text-decoration: none; color: white;">Try Now</button>
     </div>
 
-   <!-- New section -->
     <section class="user-stories">
         <div class="story-heading">
             <h1>How learners like you are achieving their goals</h1>
             <p>Read more stories</p>
         </div>
         <div class="story-slider">
-            <!-- Story 1 -->
             <div class="story">
-                <img src="pic6.jpg" alt="User Story 1">
-                <p>INOPP helped me unlock my true potential and start to believe in myself...</p>
-                <h4>Aline Kamariza</h4>
+                <img src="story1.jpg" alt="User Story 1">
             </div>
-            <!-- Story 2 -->
             <div class="story">
-                <img src="pic2.jpg" alt="User Story 2">
-                <p>INOPP showed me the depth and scope of the tech field and what it would take to work for a global tech company...</p>
-                <h4>Pacifique Junior</h4>
+                <img src="story2.jpg" alt="User Story 2">
             </div>
-            <!-- Story 3 -->
             <div class="story">
-                <img src="pic3.jpg" alt="User Story 3">
-                <p>Is it possible to balance a full-time job with a Software Engineering programme on INOPP?...</p>
-                <h4>Phillipe Nziza</h4>
+                <img src="story3.jpg" alt="User Story 3">
             </div>
-            <!-- Story 4 -->
             <div class="story">
-                <img src="pic1.jpg" alt="User Story 4">
-                <p>Christian Mazimpaka shares his motivativations for joining INOPP and offers advice to young men and women who wish to pursue their careers in different tech fields...</p>
-                <h4>Christian Mazimpaka</h4>
+                <img src="story4.jpg" alt="User Story 4">
             </div>
         </div>
     </section>
-             <footer>
-    <p>&copy; 2023 Internship Opportunity System. All rights reserved.</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2023 Internship Opportunity System. All rights reserved.</p>
+      </footer>
     </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td colspan="3" rowspan="3">1st Column</td>
+        <td colspan="3" rowspan="1">2nd Column - Row 1</td>
+        <td rowspan="2">2nd Column - Row 2</td>
+        <td rowspan="1">2nd Column - Row 3</td>
+        <td rowspan="3">3rd Column</td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">2nd Column - Row 4</td>
+        <td rowspan="1">2nd Column - Row 5</td>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1">2nd Column - Row 6</td>
+    </tr>
+    <tr>
+        <td>3rd Column - Row 1</td>
+        <td>3rd Column - Row 2</td>
+        <td>3rd Column - Row 3</td>
+    </tr>
+</table>
+
+</body>
+</html>

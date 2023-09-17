@@ -29,7 +29,7 @@
     </div>
 </div>
 <div class="other">
-    <p>Not have an account?<a href="assignment.html">Sign Up Here</a></p>
+    <p>Not have an account?<a href="signup.php">Sign Up Here</a></p>
 </div>
 <div class="someimages">
     <div class="pic1">

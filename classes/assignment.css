@@ -37,12 +37,13 @@ button[type="submit"]{
     width: 420px;
     height: 45px;
     margin-top: 25px;
-    background-color: #858073;
-    color: #6b473d;
+    background-color: #0b4b6f;
+    color: #fff;
     font-size: 20px;
     border: none;
     border-radius: 21px;
     margin-left: 45px;
+    cursor: pointer;
     
 }
 input[type="checkbox"]{
@@ -50,6 +51,7 @@ input[type="checkbox"]{
     height: 15px;
     margin-left: 90px;
     border: 15px groove solid gray;
+    cursor: pointer;
 }
 p{
     text-align: center;
@@ -57,22 +59,45 @@ p{
     font-size: 15px;
 }
 
+/* ============================== Sign Up Page ============================ */
 .login-box{
-    width: 360px;
-    height: 280px;
-    border-radius: 9px;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    background: white;
     color: black;
+    margin-left: 25%;
+    border-radius: 21px;
+    box-shadow: 0 0 40px rgba(133, 122, 194, 0.6);
 }
-.signup-box a{
-    color: white;
-    text-decoration: none;
+.login-box .details{
+    position: relative;
+    /* align-items: center; */
+    margin-left: 3%;
+    margin-top: 50px;
+    display: flex;
 }
-.para a{
-    text-decoration: underline;
+.login-box .someimages{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* max-width: fit-content; */
 }
-.login-box a{
-    color: black;
+.login-box .someimages .pic1{
+    position: relative;
+    overflow: hidden;
 }
-a:hover{
-    text-decoration: underline;
+.login-box .someimages .pic1 img{
+    width: 300px;
+    height: 200px;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;    
+}
+.login-box .someimages .pic2{
+    position: relative;
+    overflow: hidden;
+}
+.login-box .someimages .pic2 img{
+    width: 200px;
+    height: 200px;
 }
